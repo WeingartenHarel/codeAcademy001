@@ -1,0 +1,50 @@
+body {
+  background-color: black;
+  color:white;
+}
+
+.container{
+    text-align:center;
+    width:80%;
+    margin: 0 auto;
+}
+
+.headLine {
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    justify-content: space-evenly;
+}
+table {
+    text-align: center;
+    margin: 0 auto;
+}
+
+:root {
+    --bevel-size: 6px;
+    --bevel-size-m: -6px;
+    --main-bg-color: #888;
+}
+.cell {
+    !padding: 4%;
+    width: 60px;
+    height: 60px;
+    min-width: 50px;
+    min-height: 50px;
+    text-align: center;
+    font-size: 1.5em;
+    background: #666;
+    border: 1px solid #fff;
+    background-color: var(--main-bg-color);
+ 
+}
+
+.outerBevel {
+    -webkit-box-shadow: inset var(--bevel-size) var(--bevel-size) var(--bevel-size) rgba(255, 255, 255, .4), inset var(--bevel-size-m) var(--bevel-size-m) var(--bevel-size) rgba(0, 0, 0, .4);
+    -moz-box-shadow: inset var(--bevel-size) var(--bevel-size) var(--bevel-size) rgba(255, 255, 255, .4), inset var(--bevel-size-m) var(--bevel-size-m) var(--bevel-size) rgba(0, 0, 0, .4);
+    box-shadow: inset var(--bevel-size) var(--bevel-size) var(--bevel-size) rgba(255, 255, 255, .4), inset var(--bevel-size-m) var(--bevel-size-m) var(--bevel-size) rgba(0, 0, 0, .4);
+}
+.innerBevel {
+    -webkit-box-shadow: inset 0px 0px 8px 4px #000000;
+    box-shadow: inset 0px 0px 8px 4px #000000;
+}
