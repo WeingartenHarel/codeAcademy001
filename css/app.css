@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
 body {
-  background-color: black;
-  color:white;
+    --background-color: #fbfbfd;
+    color: #666;
+    font-family: 'Iceland', cursive;
+    font-size: 1.6em;
 }
 
 .container{
@@ -18,8 +21,15 @@ body {
 table {
     text-align: center;
     margin: 0 auto;
+ 
 }
+.reflect {
+    -webkit-box-reflect: below -2px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(23%, transparent), to(rgba(255, 255, 255, 0.23)));
+}
+table::after {
+    content: attr(tableId);
 
+}
 :root {
     --bevel-size: 6px;
     --bevel-size-m: -6px;
@@ -36,7 +46,7 @@ table {
     background: #666;
     border: 1px solid #fff;
     background-color: var(--main-bg-color);
- 
+    color:#fff;
 }
 
 .outerBevel {
@@ -47,4 +57,87 @@ table {
 .innerBevel {
     -webkit-box-shadow: inset 0px 0px 8px 4px #000000;
     box-shadow: inset 0px 0px 8px 4px #000000;
+}
+
+.modal-container {
+    position: fixed;
+    max-width: 350px;
+    width: 40%;
+    background-color: #f0f8ffd9;
+    margin: 0 auto;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    padding: 3%;
+    text-align: center;
+    font-size: 32px;
+    color: #000;
+}
+
+.buttonStyle {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.buttonStyleRound {
+    border: none;
+    color: white;
+    padding: 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-right: 9px;
+    border-radius: 40px;
+    font-size: 32px;
+}
+
+/* green */
+.green {
+    background-color: #4CAF50;
+}
+/* blue */
+.blue {
+    background-color: #008CBA;
+}
+/* Red */
+.red {
+    background-color: #f44336;
+}
+/* Gray */
+.gray {
+    background-color: #e7e7e7;
+    color: black;
+}
+/* Black */
+.black {
+    background-color: #555555;
+}
+
+.display {
+    display: block;
+}
+
+.displayNone {
+    display: none;
+}
+
+.headerRight , .headerLeft {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.lives-container .lives {
+    color: #f44336;
 }
